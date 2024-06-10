@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #172639;
+    color: #fff;
+    overflow-y: scroll;
+
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.mySwiper {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #000;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: #ffffffc2;
+
+        transform: translateY(-25%);
+
+        &:after {
+            font-size: 16px;
+            font-weight: 1000;
+        }
+    }
+
+    .swiper-button-prev:after {
+        content: 'prev';
+    }
+
+    .swiper-button-next:after {
+        content: 'next';
+    }
+}
+
+.mySwiperPagination {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+
+    .swiper-pagination {
+        position: relative;
+
+        .swiper-pagination-bullet {
+            background-color: #fff;
+            opacity: 1;
+            width: 50px;
+            height: 6px;
+            border-radius: 7px;
+
+            &-active {
+                background-color: #CC1409;
+            }
+        }
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section30 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section40 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.buttonPr {
+    background: #CC1409;
+    padding: 10px 15px;
+    width: fit-content;
+    font-size: 14px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+}
+
+.formLogin {
+    width: 497px;
+    padding: 30px;
+    border-radius: 10px;
+
+    display: grid;
+    gap: 40px;
+
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .listInput {
+        display: grid;
+        gap: 20px;
+
+        span {
+            color: #FF7A00;
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            margin-top: 10px;
+
+            background: #000;
+            color: #fff;
+
+            padding: 15px 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .pass {
+            position: relative;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-20%);
+            }
+        }
+    }
+
+    .submitButton {
+        text-align: center;
+        display: grid;
+        gap: 10px;
+
+
+        p {
+            font-weight: bold;
+        }
+    }
+
+    button {
+        background-color: #CC1409;
+
+        width: 100%;
+        padding: 10px;
+
+        border-radius: 5px;
+    }
+}
+
+.hoverMovieContent {
+    overflow: hidden;
+
+    .transformBox {
+        transition: .3s linear;
+        transform: translateY(77%);
+    }
+
+    .content {
+        opacity: 0;
+        transition: .3s linear;
+    }
+
+    &:hover {
+        .transformBox {
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+
+        .content {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: .3s;
+        }
+    }
+}
