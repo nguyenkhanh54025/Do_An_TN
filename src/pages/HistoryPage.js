@@ -32,7 +32,7 @@ export default function HistoryPage() {
     return (
         <main className='section container'>
             <section className='section'>
-                <TitleSection title='Lịch sử xem phim' />
+                <TitleSection title='Lịch sử phim đã xem' />
 
               
                 {userId ? (
